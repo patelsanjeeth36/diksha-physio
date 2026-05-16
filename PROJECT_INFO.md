@@ -17,8 +17,26 @@
 | Service | Account / Login | Purpose |
 |---|---|---|
 | **GitHub** | `patelsanjeeth36` · `patelsanjeeth36@gmail.com` | Hosts all code & the website files |
+| **Neon.tech** | Sign in at https://console.neon.tech | Free PostgreSQL database (for Spring Boot backend) |
+| **Render.com** | Connect via GitHub — https://render.com | Free Spring Boot hosting |
 | **Web3Forms** | Use `patel.diksharewa1998@gmail.com` to sign up | Receives callback form submissions via email |
 | **Google Maps** | Clinic link: `https://maps.app.goo.gl/ztBAom9FRBSogKLj8` | Map embed and directions link |
+
+---
+
+## Neon PostgreSQL Credentials
+
+> Full credentials are stored locally in `.env` (never committed to GitHub).
+> Use these values in Render.com → Environment tab.
+
+| Variable | Value |
+|---|---|
+| `DB_URL` | `jdbc:postgresql://ep-young-math-ap4ycfu9-pooler.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require` |
+| `DB_USER` | `neondb_owner` |
+| `DB_PASSWORD` | *(see `.env` file on your PC — do not write here)* |
+
+Neon dashboard: https://console.neon.tech/app/projects
+Project name: `diksha-physio`
 
 ---
 
