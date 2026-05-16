@@ -4,6 +4,7 @@ WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline -q
 COPY src ./src
+COPY docs ./docs
 RUN mvn clean package -DskipTests -q
 
 # Stage 2 — Run with lightweight JRE
