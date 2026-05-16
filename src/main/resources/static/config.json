@@ -1,0 +1,107 @@
+{
+  "doctor": {
+    "name": "Dr. Diksha Patel",
+    "tagline": "Physiotherapist specialising in Orthopaedic & Neurological Rehabilitation",
+    "location": "Thane East, Maharashtra",
+    "phone": "9039411136",
+    "whatsapp": "919039411136",
+    "email": "diksha.physio.care@gmail.com",
+    "experience": "4+",
+    "patients": "500+",
+    "photo": "diksha-photo.jpeg",
+    "address": {
+      "line1": "B2, Anand Kirti Apartment",
+      "line2": "Suhas Nagar, Thane East",
+      "line3": "Maharashtra, India"
+    },
+    "bio": "Hi, I'm Dr. Diksha Patel, a dedicated physiotherapist with over 4 years of hands-on clinical experience. I specialise in Orthopaedic and Neurological rehabilitation — helping patients overcome pain, regain movement, and rebuild their independence after injury, surgery, or neurological events. I offer convenient online video consultations for patients across India, and home visits for those in and around Thane.",
+    "hours": {
+      "weekdays": "Mon – Sat: 9:00 AM – 7:00 PM",
+      "sunday": "Sunday: By Appointment"
+    }
+  },
+  "googleMapsLink": "https://maps.app.goo.gl/ztBAom9FRBSogKLj8",
+  "googleMapsEmbed": "https://maps.google.com/maps?q=Suhas+Nagar+Thane+East+Maharashtra&output=embed",
+  "freeConsultation": true,
+  "freeConsultationText": "First consultation is completely FREE — call or WhatsApp now!",
+  "orthoConditions": [
+    "Lower Back Pain & Sciatica",
+    "Slip Disc / Disc Herniation",
+    "Cervical Spondylosis / Neck Pain",
+    "Knee Pain & Osteoarthritis",
+    "Knee Replacement Recovery",
+    "Hip Replacement Recovery",
+    "Frozen Shoulder",
+    "Sports Injuries & Ligament Tears",
+    "Post-Fracture Rehabilitation",
+    "Plantar Fasciitis / Heel Pain",
+    "Tennis Elbow / Golfer's Elbow",
+    "Scoliosis & Postural Correction"
+  ],
+  "neuroConditions": [
+    "Stroke Rehabilitation (Hemiplegia)",
+    "Parkinson's Disease",
+    "Bell's Palsy / Facial Palsy",
+    "Cerebral Palsy",
+    "Spinal Cord Injury",
+    "Peripheral Neuropathy",
+    "Guillain-Barré Syndrome",
+    "Multiple Sclerosis",
+    "Vertigo & Balance Disorders",
+    "Post-COVID Neurological Recovery"
+  ],
+  "services": [
+    {
+      "icon": "video",
+      "title": "Online Consultation & Diagnosis",
+      "description": "Expert physiotherapy assessment via video call — from anywhere in India. I evaluate your condition, diagnose the problem, and share a personalised recovery plan digitally.",
+      "highlights": [
+        "Video call via Zoom or Google Meet",
+        "Personalised exercise plan shared via WhatsApp",
+        "Follow-up support included"
+      ],
+      "featured": true,
+      "cta": "Book Now — First Consult FREE"
+    },
+    {
+      "icon": "home",
+      "title": "Home Visit Physiotherapy",
+      "description": "Full hands-on physiotherapy at your doorstep — ideal for elderly patients, post-surgery recovery, or anyone unable to travel. Covering Thane and nearby areas.",
+      "highlights": [],
+      "featured": false,
+      "cta": ""
+    },
+    {
+      "icon": "ortho",
+      "title": "Orthopaedic Rehabilitation",
+      "description": "Specialised treatment for joint pain, back pain, fractures, arthritis, sports injuries, and post-operative orthopaedic recovery.",
+      "highlights": [],
+      "featured": false,
+      "cta": ""
+    },
+    {
+      "icon": "neuro",
+      "title": "Neurological Rehabilitation",
+      "description": "Focused care for stroke, Parkinson's, Bell's palsy, cerebral palsy, and other neurological conditions — improving mobility, balance, and independence.",
+      "highlights": [],
+      "featured": false,
+      "cta": ""
+    },
+    {
+      "icon": "pain",
+      "title": "Pain Management",
+      "description": "Evidence-based strategies for chronic back, neck, joint, and shoulder pain — combining manual therapy, electrotherapy, and targeted exercises.",
+      "highlights": [],
+      "featured": false,
+      "cta": ""
+    },
+    {
+      "icon": "surgery",
+      "title": "Post-Surgery Rehabilitation",
+      "description": "Structured recovery programmes after knee, hip, shoulder, or spinal surgeries — in-clinic, at home, or online.",
+      "highlights": [],
+      "featured": false,
+      "cta": ""
+    }
+  ]
+}
