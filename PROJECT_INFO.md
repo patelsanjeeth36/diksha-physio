@@ -19,7 +19,7 @@
 | **GitHub** | `patelsanjeeth36` · `patelsanjeeth36@gmail.com` | Hosts all code & the website files |
 | **Neon.tech** | Sign in at https://console.neon.tech | Free PostgreSQL database (for Spring Boot backend) |
 | **Render.com** | Connect via GitHub — https://render.com | Free Spring Boot hosting |
-| **Web3Forms** | Use `patel.diksharewa1998@gmail.com` to sign up | Receives callback form submissions via email |
+| **Web3Forms** | Use `diksha.physio.care@gmail.com` to sign up | Receives callback form submissions via email |
 | **Google Maps** | Clinic link: `https://maps.app.goo.gl/ztBAom9FRBSogKLj8` | Map embed and directions link |
 
 ---
@@ -46,7 +46,7 @@ Project name: `diksha-physio`
 |---|---|
 | Name | Dr. Diksha Patel |
 | Phone / WhatsApp | 9039411136 |
-| Email | patel.diksharewa1998@gmail.com |
+| Email | diksha.physio.care@gmail.com |
 | Address | B2, Anand Kirti Apartment, Suhas Nagar, Thane East |
 | Experience | 4+ years |
 | Specialisation | Orthopaedic & Neurological Physiotherapy |
@@ -68,7 +68,7 @@ Project name: `diksha-physio`
 The callback form sends requests to Dr. Diksha's email via Web3Forms (free).
 
 1. Go to: https://web3forms.com
-2. Enter `patel.diksharewa1998@gmail.com` → click **Create Access Key**
+2. Enter `diksha.physio.care@gmail.com` → click **Create Access Key**
 3. Copy the Access Key (looks like: `abc12345-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
 4. Edit `docs/config.json` on GitHub (see editing guide below)
 5. In the `callbackForm` HTML (docs/index.html), replace `REPLACE_WITH_WEB3FORMS_KEY` with the key
@@ -178,5 +178,5 @@ Multiple Sclerosis · Vertigo & Balance Disorders · Post-COVID Neurological Rec
 
 If the website goes down:
 - Patients can always reach Dr. Diksha on **9039411136** (call/WhatsApp)
-- Email: patel.diksharewa1998@gmail.com
+- Email: diksha.physio.care@gmail.com
 - The code is always safe on GitHub: https://github.com/patelsanjeeth36/diksha-physio
