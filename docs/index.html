@@ -714,6 +714,9 @@
   }
 
   // ─── FORM SUBMIT ──────────────────────────────────────────────────────────
+  // Auto-detects: GitHub Pages → Web3Forms email | Render/other → Spring Boot API
+  const IS_STATIC = window.location.hostname.includes('github.io');
+
   document.getElementById('callbackForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     clearErrors();
@@ -725,23 +728,39 @@
     if (!valid) return;
 
     setLoading(true);
-    const accessKey = document.querySelector('[name=access_key]').value;
+    const preferredTime = document.getElementById('preferredTime').value;
+    const message       = document.getElementById('message').value.trim();
+
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key:     accessKey,
-          subject:        document.querySelector('[name=subject]').value,
-          from_name:      document.querySelector('[name=from_name]').value,
-          name, phone,
-          service_type:   document.getElementById('serviceType').value,
-          preferred_time: document.getElementById('preferredTime').value,
-          message:        document.getElementById('message').value.trim(),
-        }),
-      });
-      const data = await res.json();
-      if (data.success) {
+      let res, success = false;
+
+      if (IS_STATIC) {
+        // GitHub Pages — send via Web3Forms (email to Dr. Diksha)
+        const data = await (await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            access_key:     document.querySelector('[name=access_key]').value,
+            subject:        'New Callback Request — Dr. Diksha Patel',
+            from_name:      'Diksha Physio Website',
+            name, phone,
+            preferred_time: preferredTime,
+            service_type:   document.getElementById('serviceType').value,
+            message,
+          }),
+        })).json();
+        success = data.success;
+      } else {
+        // Render / custom domain — save to database + email via Spring Boot
+        res = await fetch('/api/callback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone, preferredTime, message }),
+        });
+        success = res.ok;
+      }
+
+      if (success) {
         showToast('success', 'Thank you! Dr. Diksha will call you back shortly.');
         this.reset();
       } else {
