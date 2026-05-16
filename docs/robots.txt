@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patelsanjeeth36.github.io/diksha-physio/sitemap.xml
