@@ -11,9 +11,12 @@ import java.util.List;
 public class CallbackRequestService {
 
     private final CallbackRequestRepository repository;
+    private final EmailNotificationService emailService;
 
-    public CallbackRequestService(CallbackRequestRepository repository) {
+    public CallbackRequestService(CallbackRequestRepository repository,
+                                  EmailNotificationService emailService) {
         this.repository = repository;
+        this.emailService = emailService;
     }
 
     public CallbackRequest save(CallbackRequestDto dto) {
@@ -22,7 +25,9 @@ public class CallbackRequestService {
         entity.setPhone(dto.getPhone());
         entity.setMessage(dto.getMessage());
         entity.setPreferredTime(dto.getPreferredTime());
-        return repository.save(entity);
+        CallbackRequest saved = repository.save(entity);
+        emailService.sendCallbackNotification(saved);
+        return saved;
     }
 
     public List<CallbackRequest> findAll() {
