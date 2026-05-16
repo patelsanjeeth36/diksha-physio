@@ -556,27 +556,29 @@
 
       setLoading(true);
       try {
-        const res = await fetch('/api/callback', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name,
-            phone,
-            preferredTime: document.getElementById('preferredTime').value,
-            message: document.getElementById('message').value.trim(),
-          }),
-        });
+        const formData = {
+          access_key:   document.querySelector('[name=access_key]').value,
+          subject:      document.querySelector('[name=subject]').value,
+          from_name:    document.querySelector('[name=from_name]').value,
+          name,
+          phone,
+          service_type: document.getElementById('serviceType').value,
+          preferred_time: document.getElementById('preferredTime').value,
+          message:      document.getElementById('message').value.trim(),
+        };
 
-        if (res.ok) {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(formData),
+        });
+        const data = await res.json();
+
+        if (data.success) {
           showToast('success', 'Thank you! Dr. Diksha will call you back shortly.');
           this.reset();
         } else {
-          const data = await res.json().catch(() => ({}));
-          if (data.errors) {
-            Object.entries(data.errors).forEach(([f, m]) => showFieldError(f, m));
-          } else {
-            showToast('error', 'Something went wrong. Please call directly: 9039411136');
-          }
+          showToast('error', data.message || 'Something went wrong. Please call directly: 9039411136');
         }
       } catch {
         showToast('error', 'Network error. Please call Dr. Diksha directly on 9039411136.');
